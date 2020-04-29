@@ -205,3 +205,27 @@ This post contains sample configuration for my emacs in an org file
     (unless (package-installed-p pkg)
       (package-install pkg)))
   #+END_SRC
+
+
+* FastPages link 
+
+The idea is simple 
+
+- Links are prepended by a directive
+- When doing html export link get converted into jekyll include statement already defined in the code
+- When exporting to other backends it follows the same structure as normal link for that structure
+
+#+begin_src emacs-lisp :results silent
+  (defun jekyll-include (inc-tmpl url)
+    (s-lex-format "{% include ${inc-tmpl} content='<a href=\"${url}\">${url}</a>' %}"))
+       
+  (org-link-set-parameters
+   "yt"
+   :export (lambda (path desc backend)
+	     (cond
+	      ((eq 'html backend)
+	       (jekyll-include "youtube.html" path ))))
+   :help-echo "This links helps in exporting link to jekyll youtube liquid template")
+
+#+end_src
+
