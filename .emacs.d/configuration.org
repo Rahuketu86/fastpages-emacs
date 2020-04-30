@@ -206,24 +206,19 @@ This post contains sample configuration for my emacs in an org file
       (package-install pkg)))
   #+END_SRC
 
-<<<<<<< HEAD
+
 * String manupulation library elisp
   #+begin_src emacs-lisp
     (use-package s
       :ensure t)
   #+end_src
 
-* Fastpages Blog Publish function
-#+begin_src emacs-lisp
-  (require 'org)
-=======
+
 
 * Fastpages Blog Publish function
 #+begin_src emacs-lisp
-  (cd "/Landmark2/pdo/Code/ALDAOps/FastPagesDev")
+
   (require 'org)
-  (require 'ox-rss)
->>>>>>> bddaa6486f9da090f920ecf94e6d4f5c0f01d2f6
   (require 'ox-publish)
   (require 'ox-html)
   (setq org-html-htmlize-output-type 'css)
@@ -270,17 +265,7 @@ This post contains sample configuration for my emacs in an org file
     (org-publish-all))
 #+end_src
 
-<<<<<<< HEAD
-=======
-* String manupulation library elisp
-  #+begin_src emacs-lisp
-    (use-package s
-      :ensure t)
-  #+end_src
 
-
-
->>>>>>> bddaa6486f9da090f920ecf94e6d4f5c0f01d2f6
 * FastPages link 
 
 The idea is simple 
