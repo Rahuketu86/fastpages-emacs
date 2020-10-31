@@ -45,7 +45,7 @@ This post contains sample configuration for my emacs in an org file
 				 t)
     (when (< emacs-major-version 24)
       ;; For important compatibility libraries like cl-lib
-      (add-to-list 'package-archives '("gnu" . "http://elpa.gnu.org/packages/")))
+      (add-to-list 'package-archives '("gnu" . "https://elpa.gnu.org/packages/")))
     (package-initialize)
 
   #+END_SRC
